@@ -1,2 +1,2 @@
 #!/bin/bash
-result=$(( POWER / DIVIDE )) echo "$result"
+if ! [[ "$POWER" =~ ^[0-9]+$ ]] || ! [[ "$DIVIDE" =~ ^[0-9]+$ ]]; then echo "Error: POWER and DIVIDE must be set and contain numeric values." exit 1 fi # Check for division by zero if [ "$DIVIDE" -eq 0 ]; then echo "Error: Division by zero is not allowed."  exit 1firesult=$(( POWER / DIVIDE ))echo "$result"
